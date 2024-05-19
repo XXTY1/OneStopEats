@@ -1,0 +1,7 @@
+{
+    "compilerOptions": {
+      "moduleResolution": "Node" // Tells TypeScript to use Node.js-style module resolution
+    },
+    "include": ["src"] // Indicates which directories to include in the compilation
+  }
+  
