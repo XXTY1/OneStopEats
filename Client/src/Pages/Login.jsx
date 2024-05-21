@@ -23,8 +23,9 @@ export default function LoginPage() {
   }, [user]);
 
   const submit = async ({ email, password }) => {
-    await login(email, password);
-    navigate("/");
+    const res = await login(email, password);
+    console.log(res);
+    
   };
 
   return (

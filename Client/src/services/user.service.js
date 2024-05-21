@@ -47,6 +47,7 @@ export const getById = async (userId) => {
 };
 
 export const updateUser = async (userData) => {
+  console.log(userData);
   const { data } = await axios.put("/api/users/update", userData);
   return data;
 };

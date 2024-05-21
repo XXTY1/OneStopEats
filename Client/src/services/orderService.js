@@ -26,6 +26,7 @@ export const trackOrderById = async (orderId) => {
 
 export const getAll = async (state) => {
   const { data } = await axios.get(`/api/orders/${state ?? ""}`);
+  console.log(data);
   return data;
 };
 

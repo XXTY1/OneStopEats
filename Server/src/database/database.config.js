@@ -2,7 +2,7 @@
 import { connect, set } from "mongoose";
 import bcrypt from "bcrypt";
 // Import the models and sample data
-import { userModel } from "../models/user.model.js";
+import { UserModel } from "../models/user.model.js";
 import { foodModel } from "../models/food.model.js";
 import { sample_foods, sample_users } from "../data.js";
 
@@ -31,7 +31,7 @@ export const dbconnect = async () => {
 // Function to seed users
 async function seedUsers() {
   // Check if users have already been seeded
-  const usersCount = await userModel.countDocuments();
+  const usersCount = await UserModel.countDocuments();
   if (usersCount > 0) {
     console.log("Users seed is already done");
     return;
@@ -40,7 +40,7 @@ async function seedUsers() {
   // If not, hash the passwords and create new users
   for (let user of sample_users) {
     user.password = await bcrypt.hash(user.password, SALT_ROUNDS_FOR_BCRYPT);
-    await userModel.create(user);
+    await UserModel.create(user);
   }
   console.log("Users seed is done");
 }
