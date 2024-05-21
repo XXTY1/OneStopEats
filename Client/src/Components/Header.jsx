@@ -10,7 +10,7 @@ const UserMenu = ({ user, logout }) => {
     <div className="group relative  ">
       <Link
         to="/dashboard"
-        className="group px-4 py-2 text-sm font-medium text-gray-700 duration-300 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+        className="group px-4 py-2 text-nowrap font-medium text-gray-700 duration-300 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
       >
         {user.name}
       </Link>
