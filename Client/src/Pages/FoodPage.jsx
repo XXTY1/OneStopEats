@@ -76,7 +76,7 @@ const FoodPage = () => {
       >
         <div className="w-4/5 rounded-lg bg-white bg-opacity-70 p-4 shadow-md">
           <h1 className="mb-2 text-2xl font-bold text-gray-700">{food.name}</h1>
-          <div className="mb-4 flex flex-col items-center justify-between space-y-4 sm:flex-row sm:space-y-0">
+          <div className="mb-4 flex flex-col items-center justify-start space-x-2 space-y-4 sm:flex-row sm:space-y-0">
             <button
               className="rounded bg-blue-300 px-4 py-2 font-bold text-gray-800 hover:bg-gray-400"
               onClick={handleMoveToBack}
