@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { getNewOrderForCurrentUser } from "../services/orderService";
 import Title from "../Components/Title";
-// import OrderItemsList from '../components/OrderItemsList/OrderItemsList';
 import Map from "../Components/Map";
 import PaypalButtons from "../Components/PaypalButtons";
 
@@ -11,7 +10,6 @@ export default function PaymentPage() {
   useEffect(() => {
     getNewOrderForCurrentUser().then((data) => setOrder(data));
   }, []);
-
   if (!order) return null;
 
   return (
