@@ -6,6 +6,7 @@ import Title from "../Components/Title";
 import Input from "../Components/Input";
 import { EMAIL } from "../constants/patterns";
 import Button from "../Components/Button";
+import { toast } from "react-toastify";
 
 export default function UserEditPage() {
   const {
@@ -33,6 +34,7 @@ export default function UserEditPage() {
 
   const submit = (userData) => {
     updateUser(userData);
+    toast.success("User Data Updated Sucessfully")
   };
 
   return (
